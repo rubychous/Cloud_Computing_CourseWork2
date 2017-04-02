@@ -1,45 +1,27 @@
-Flask on OpenShift
+Cloud Computing CourseWork 2
 ==================
 
-This git repository helps you get up and running quickly w/ a Flask installation
-on OpenShift.
+This git repository is about cloud computing coursework 2.
 
 
-Running on OpenShift
+This application is written in Flask + Python
 ----------------------------
 
-Create an account at https://www.openshift.com
 
-### Via Openshift web console
+### Home
+The basic information about this application
 
-[![Launch on OpenShift](http://launch-shifter.rhcloud.com/launch/light/Click to install.svg)](https://openshift.redhat.com/app/console/application_type/custom?&cartridges[]=python-2.6&initial_git_url=https://github.com/openshift/flask-example.git&name=flask)
+### Emotion App
+Provide sentimental analysis.
 
-### Via rhc & git
+### Visualization
+For demonstrating a graph related to polynomial function
 
-Create a python application
+### Database
+Showing the MongoDB methods, collections, and database collections related to London query
 
-    rhc app create flask python-2.6
+That's all, please checkout my application at:
 
-Add this upstream flask repo
-
-    cd flask
-    git remote add upstream -m master https://github.com/openshift/flask-example.git
-    git pull -s recursive -X theirs upstream master
-    
-Then push the repo upstream
-
-    git push
-
-That's it, you can now checkout your application at:
-
-    http://flask-$yournamespace.rhcloud.com
+    https://apitest2-rubychous.apps.devcloud.eecs.qmul.ac.uk/index/
 
 ------------------------------
-
-To get more log messages in your OpenShift logs please add the following line to your code
-
-    app.config['PROPAGATE_EXCEPTIONS'] = True
-
-To read more about logging in Flask please see this email
-
-http://librelist.com/browser//flask/2012/1/27/catching-exceptions-from-flask/
